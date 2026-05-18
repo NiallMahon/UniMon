@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://c7pgelqoy82vu"]
+
+[ext_resource type="Script" uid="uid://ct6ls68s4a73x" path="res://scripts/guide.gd" id="1_0el4p"]
+[ext_resource type="Texture2D" uid="uid://b4xij5nhwxb8" path="res://assets/graphics/npc/knight.png" id="1_or254"]
+[ext_resource type="FontFile" uid="uid://d4bninmjm1iwf" path="res://PixelOperator8.ttf" id="3_rb1b7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0el4p"]
+atlas = ExtResource("1_or254")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb1b7"]
+atlas = ExtResource("1_or254")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxloj"]
+atlas = ExtResource("1_or254")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd7ko"]
+atlas = ExtResource("1_or254")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nhlb8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0el4p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb1b7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxloj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd7ko")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0el4p"]
+size = Vector2(12.000001, 15.471167)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_or254"]
+size = Vector2(34.66667, 14.064699)
+
+[node name="guide" type="Node2D" unique_id=577621240]
+script = ExtResource("1_0el4p")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=539993966]
+position = Vector2(-2.842171e-14, -12)
+scale = Vector2(1.5, 1.422)
+sprite_frames = SubResource("SpriteFrames_nhlb8")
+autoplay = "default"
+frame_progress = 0.9432555
+flip_h = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D" unique_id=1622721526]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/CharacterBody2D" unique_id=784509430]
+position = Vector2(1.11262e-06, 4.219408)
+scale = Vector2(0.99999964, 1)
+shape = SubResource("RectangleShape2D_0el4p")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1330063212]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=157024874]
+position = Vector2(-14, -4.000002)
+scale = Vector2(1.4999996, 1.422)
+shape = SubResource("RectangleShape2D_or254")
+
+[node name="Label" type="Label" parent="." unique_id=1028386469]
+visible = false
+offset_left = -18.0
+offset_top = -28.0
+offset_right = 22.0
+offset_bottom = -5.0
+theme_override_colors/font_color = Color(0.26533955, 0.38330215, 0.5472386, 1)
+theme_override_colors/font_shadow_color = Color(0.5634764, 0.026999786, 0.21041256, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rb1b7")
+theme_override_font_sizes/font_size = 8
+text = "E"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
