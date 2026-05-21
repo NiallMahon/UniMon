@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://qd2kwto3hh5o"]
 
 [ext_resource type="Theme" uid="uid://64kj0br48n5j" path="res://assets/Button.tres" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://da18bic7vogsk" path="res://assets/b85e98060bb3c79a1d12c039a4be4ffb.png" id="2_ekxnf"]
 
 [node name="MainMenu" type="Control" unique_id=166266711]
 layout_mode = 3
@@ -57,3 +58,15 @@ layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "QUIT"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1999165147]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -302.0
+offset_top = 62.0
+offset_right = 302.0
+offset_bottom = 295.0
+grow_horizontal = 2
+texture = ExtResource("2_ekxnf")
