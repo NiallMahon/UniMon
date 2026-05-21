@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="UniMon"
-run/main_scene="uid://b6876fjuru7fy"
+run/main_scene="uid://qd2kwto3hh5o"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [input]

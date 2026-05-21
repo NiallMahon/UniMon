@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://qd2kwto3hh5o"]
 
+[ext_resource type="Script" uid="uid://b71yhq4s436mm" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="Theme" uid="uid://64kj0br48n5j" path="res://assets/Button.tres" id="1_l6cm7"]
 [ext_resource type="Texture2D" uid="uid://da18bic7vogsk" path="res://assets/b85e98060bb3c79a1d12c039a4be4ffb.png" id="2_ekxnf"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bqqt6")
 
 [node name="Panel" type="Panel" parent="." unique_id=2024939733]
 layout_mode = 1
@@ -35,25 +37,25 @@ grow_vertical = 0
 theme_override_constants/separation = 27
 alignment = 1
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=1579942547]
+[node name="PLAY" type="Button" parent="VBoxContainer" unique_id=1579942547]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "PLAY"
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=2036717377]
+[node name="LOAD" type="Button" parent="VBoxContainer" unique_id=2036717377]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "LOAD"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1769041976]
+[node name="OPTIONS" type="Button" parent="VBoxContainer" unique_id=1769041976]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
 text = "OPTIONS"
 
-[node name="Button4" type="Button" parent="VBoxContainer" unique_id=1264798834]
+[node name="QUIT" type="Button" parent="VBoxContainer" unique_id=1264798834]
 layout_mode = 2
 theme = ExtResource("1_l6cm7")
 theme_override_font_sizes/font_size = 32
@@ -70,3 +72,5 @@ offset_right = 302.0
 offset_bottom = 295.0
 grow_horizontal = 2
 texture = ExtResource("2_ekxnf")
+
+[connection signal="pressed" from="VBoxContainer/PLAY" to="." method="_on_play_pressed"]
