@@ -1,6 +1,5 @@
 extends CharacterBody2D
 
-
 const SPEED = 100.0
 var direction = Vector2.ZERO
 
@@ -25,6 +24,7 @@ func animation():
 			$AnimatedSprite2D.play("down")
 		elif direction.y<0 :
 			$AnimatedSprite2D.play("up")
+		
 	else:
 		$AnimatedSprite2D.frame = 0
 		

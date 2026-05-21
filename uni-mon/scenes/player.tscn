@@ -121,6 +121,7 @@ script = ExtResource("1_g2els")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=261081588]
 sprite_frames = SubResource("SpriteFrames_smehm")
 animation = &"down"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1928262999]
 shape = SubResource("RectangleShape2D_ur7pv")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ct6ls68s4a73x" path="res://scripts/guide.gd" id="1_0el4p"]
 [ext_resource type="Texture2D" uid="uid://b4xij5nhwxb8" path="res://assets/graphics/npc/knight.png" id="1_or254"]
-[ext_resource type="FontFile" uid="uid://d4bninmjm1iwf" path="res://PixelOperator8.ttf" id="3_rb1b7"]
+[ext_resource type="FontFile" uid="uid://d4bninmjm1iwf" path="res://assets/graphics/PixelOperator8.ttf" id="3_rb1b7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0el4p"]
 atlas = ExtResource("1_or254")
@@ -44,7 +44,7 @@ animations = [{
 size = Vector2(12.000001, 15.471167)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_or254"]
-size = Vector2(34.66667, 14.064699)
+size = Vector2(47.333344, 40.78762)
 
 [node name="guide" type="Node2D" unique_id=577621240]
 script = ExtResource("1_0el4p")
@@ -54,7 +54,7 @@ position = Vector2(-2.842171e-14, -12)
 scale = Vector2(1.5, 1.422)
 sprite_frames = SubResource("SpriteFrames_nhlb8")
 autoplay = "default"
-frame_progress = 0.9432555
+frame_progress = 0.97689193
 flip_h = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Sprite2D" unique_id=1622721526]
@@ -68,7 +68,7 @@ shape = SubResource("RectangleShape2D_0el4p")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=157024874]
-position = Vector2(-14, -4.000002)
+position = Vector2(-5.684342e-14, -7)
 scale = Vector2(1.4999996, 1.422)
 shape = SubResource("RectangleShape2D_or254")
 
